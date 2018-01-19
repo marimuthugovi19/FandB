@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">F &amp; B</string>
+
+    <string name="skip">Skip</string>
+
+    <string name="combos">Combos</string>
+    <string name="drinks">Drinks</string>
+    <string name="creeps">Creeps</string>
+    <string name="specials">Specials</string>
+    <string name="snacks">Snacks</string>
+
+</resources>

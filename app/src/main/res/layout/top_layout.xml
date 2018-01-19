@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentInsetStart="-8dp"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/black">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1.0">
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/backIconLayout"
+            android:layout_weight="0.15"
+            android:gravity="left|center"
+            android:paddingStart="10dp"
+            tools:ignore="RtlCompat">
+            
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_left_arrow"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_name"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/skipLayout"
+
+            android:layout_weight="0.15">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:text="@string/skip"
+                android:paddingEnd="10dp"
+                android:gravity="right|center"
+                android:textColor="#ffffff"
+                tools:ignore="RtlCompat" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

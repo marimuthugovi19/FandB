@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="test.fandb.MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/topLayout"
+            layout="@layout/top_layout"
+            ></include>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomLayout"
+            android:orientation="vertical">
+
+        <test.fandb.class_files.sliding_tabs.SlidingTabLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/foodCategorySlidingTabs"
+            android:elevation="0dp"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/foodsViewPagers">
+
+        </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomLayout"
+            android:layout_alignParentBottom="true"
+            android:background="@color/yellow">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:id="@+id/expandedLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="F &amp; B Summary"
+                    android:textSize="14dp"
+                    android:gravity="left|center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/foodCartRecyclerView"
+                    ></android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:id="@+id/clickToShowLayout"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.7">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="AED 0"
+                        android:id="@+id/foodTotalPriceTextView"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:rotation="90"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/rotationImageView"
+                        android:src="@drawable/ic_left_arrow_black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="0.3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Pay"
+                        android:gravity="center"
+                        android:textSize="18dp"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:rotation="180"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/ic_left_arrow_black"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
